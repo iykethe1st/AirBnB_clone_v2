@@ -1,7 +1,29 @@
+# AirBnB Clone Project
 
+This project is a clone of the popular vacation rental platform, AirBnB, built using the Python programming language and Flask web framework for the ALX Software Engineering programme. 
 
-<center> <h1>HBNB - The Console</h1> </center>
+## Features
+- User authentication and authorization
+- Listing properties for rent
+- Booking properties
+- Managing bookings and reservations
+- User profiles with past booking history
+- Reviews and ratings for properties
+- Search and filtering properties by location, price range, and other criteria
 
-This repository contains the initial stage of a project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
+## Requirements
+- Python 3.x
+- Flask
+- MySQL
 
----
+## Getting Started
+1. Clone the repository: `git clone https://github.com/<your_username>/AirBnB_clone.git`
+2. Install the required packages: `pip install -r requirements.txt`
+3. Set the environment variable: `export FLASK_APP=run.py`
+4. Run the migrations: `flask db upgrade`
+5. Run the development server: `flask run`
+6. Open your browser and navigate to localhost
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
