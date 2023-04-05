@@ -7,7 +7,21 @@ apt-get install -y nginx
 mkdir -p /data/web_static/releases/test/
 ln -sf /data/web_static/releases/test/ /data/web_static/current
 mkdir -p /data/web_static/shared/
-echo "Holberton School" > /data/web_static/releases/test/index.html
+echo "<html>
+  <head>
+  </head>
+  <body>
+    Holberton School
+  </body>
+</html>
+ubuntu@89-web-01:~/$ curl localhost/hbnb_static/index.html
+<html>
+  <head>
+  </head>
+  <body>
+    Holberton School
+  </body>
+</html>" > /data/web_static/releases/test/index.html
 
 chgrp -R ubuntu /data/
 chown -R ubuntu /data/
