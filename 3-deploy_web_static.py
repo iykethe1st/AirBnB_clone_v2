@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 # Fabfile to create and distribute an archive to a web server.
 import os.path
+from fabric.api import put
+from fabric.api import run
 from datetime import datetime
 from fabric.api import env
 from fabric.api import local
-from fabric.api import put
-from fabric.api import run
 
-env.hosts = ["54.197.82.23", "18.207.112.232"]
+env.hosts = ["54.236.30.191", "54.82.135.171"]
 
 
 def do_pack():
@@ -28,12 +28,12 @@ def do_pack():
 
 
 def do_deploy(archive_path):
-    """Distributes an archive to a web server.
+    """distributes archive to a web server.
     Args:
-        archive_path (str): The path of the archive to distribute.
+        archive_path (str): The path of the archive to be distributed.
     Returns:
-        If the file doesn't exist at archive_path or an error occurs - False.
-        Otherwise - True.
+        If the file doesn't exist at archive_path or an error occurs - return False.
+        Otherwise - return True.
     """
     if os.path.isfile(archive_path) is False:
         return False
@@ -68,7 +68,7 @@ def do_deploy(archive_path):
 
 
 def deploy():
-    """Create and distribute an archive to a web server."""
+    """creates and distributes archive to a web server."""
     file = do_pack()
     if file is None:
         return False
