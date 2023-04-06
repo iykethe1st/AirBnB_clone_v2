@@ -70,7 +70,13 @@ file { '/var/www/html':
 
 file { '/var/www/html/index.html':
   ensure  => 'present',
-  content => "Welcome to The_Masterminds home\n"
+  content => "<html>
+  <head>
+  </head>
+  <body>
+    Holberton School
+  </body>
+</html>/n"
 } ->
 
 file { '/var/www/html/404.html':

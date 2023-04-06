@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 # Fabfile to create and distribute an archive to a web server.
 import os.path
+from fabric.api import env
 from fabric.api import put
 from fabric.api import run
 from datetime import datetime
-from fabric.api import env
 from fabric.api import local
 
 env.hosts = ["54.236.30.191", "54.82.135.171"]
